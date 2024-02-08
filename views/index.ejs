@@ -1,0 +1,16 @@
+<%- include('header') %>
+    <main>
+        <div class="grid-row">
+            <% mydata.forEach((toy)=> { %>
+                <div class="grid-item">
+                    <%= toy.title.slice(0, 30) %>
+
+                        <a href="<%= `${toy.url}`%>" class="button" data-tooltip="Go to amazon site">
+                            BUY
+                        </a>
+
+                </div>
+                <% }) %> 
+        </div>
+    </main>
+    <%- include('footer') %>
